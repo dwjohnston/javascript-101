@@ -22,7 +22,7 @@ THe problem is - what happens if the form you are submitting - you forgot to fil
 
 My understanding is that this was the initial motivation for JavaScript - 'what if we could run some code in the browser to do simple little validation things like this, before we submit the form?'. 
 
-From there - JavaScript has been used to more and more behaviour, and these days a typical web application executes more of it's logic _in the browser_ rather than sending requests off to server to execute the logic. 
+From there - JavaScript has been used to more and more behaviour, and these days a typical web application executes more of its logic _in the browser_ rather than sending requests off to server to execute the logic. 
 
 JavaScript has evolved since it was first created. New features are always being proposed and created. 
 
