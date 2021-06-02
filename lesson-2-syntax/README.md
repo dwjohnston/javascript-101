@@ -190,7 +190,9 @@ if (number === 2) {
 
 
 
-### `=` vs `==` vs `===`
+### Comparrisons
+
+#### `=` vs `==` vs `===`
 
 You'll note that in those if conditions, I'm using that `===` operator. 
 
@@ -225,7 +227,7 @@ Bottom line, just always use `===`.
 You can also use `!==` to denote 'not equals'. 
 
 
-### Other comparisons
+#### Other comparisons
 
 We can also use do less than /greater than comparisons: 
 
@@ -233,6 +235,16 @@ We can also use do less than /greater than comparisons:
 - `>` Greater than
 - `<=` Less than or equals
 - `>=` Greater than or equals
+
+#### And/Or comparrison chaining 
+
+You can do and/or operations with  `&&` and `||` syntax. 
+
+eg. to find a value between 5 and 10 inclusive, you might do: 
+
+```javascript
+const valueIsBetweenFiveAndTen = (value >= 5) && (value <= 10); 
+```
 
 ## Functions 
 

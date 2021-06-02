@@ -10,7 +10,7 @@ describe ("This is an example test", ()=> {
     }); 
 }); 
 
-
+// This one already works. 
 describe("addTwoNumbers", ()=> {
     it ("Does what's expected", () => {
 
@@ -74,3 +74,7 @@ describe("areValuesEqual", () => {
 
     }); 
 }); 
+
+
+
+// Tests for functions where you need to 
