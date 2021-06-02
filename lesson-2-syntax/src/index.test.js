@@ -67,7 +67,7 @@ describe("isStringDavid", () => {
 describe("areValuesEqual", () => {
     it ("does what is expected", () => {
         expect(areValuesEqual("a", "a")).toBe(true); 
-        expect(areValuesEqual("a", "b")).toBe(true); 
+        expect(areValuesEqual("a", "b")).toBe(false); 
         expect(areValuesEqual(0, '')).toBe(false); 
         expect(areValuesEqual(0, false)).toBe(false); 
 

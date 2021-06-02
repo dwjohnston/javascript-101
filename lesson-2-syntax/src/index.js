@@ -34,7 +34,7 @@ export function getLargestNumber(a, b) {
 
 }
 
-export function isStringDavid(a) {
+export function isStringDavid(value) {
 
 }
 
