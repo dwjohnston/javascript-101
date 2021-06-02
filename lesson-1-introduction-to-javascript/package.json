@@ -1,0 +1,9 @@
+{
+  "name": "lesson-1-introduction-to-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT", 
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}

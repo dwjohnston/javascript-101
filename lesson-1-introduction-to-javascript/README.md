@@ -49,4 +49,41 @@ Every device has a web browser - so you just need to write your application for 
 You don't need to tell people to install anything for them to use your application - all they need to do is visit your web address. 
 
 
+## Tools 
+
+### The browser
+
+The quickest way you get started with writing JavaScript is to open your web browser, and press F12 to open the developer console. 
+
+Go to the console tab and you can start writing code there. 
+
+### NodeJS
+
+NodeJS is a JavaScript runtime that you can install on your computer, you can get it here:  =
+https://nodejs.org/en/
+
+You can execute some JavaScript by running `node myfile.js` where `myfile.js` contains your JavaScript code. 
+
+### NPM/Yarn
+
+NPM (Node Package Manager) and Yarn are JavaScript package managers. 
+
+NPM comes with NodeJS. Yarn is an alternative, and one that I prefer. 
+
+You can install it here: https://yarnpkg.com/getting-started/install
+
+A package, also known as a library, is a bundle of code that someone else has written, that you might want to pull into your code and use. 
+
+NPM and Yarn also have additional functionality such as allowing you to run scripts. 
+
+This brings us to our first exercise: 
+
+## Exercise 1 - Hello World!
+
+1.  In your terminal, navigate to this folder (`lesson-1-introduction-to-javascript`). 
+2. Run `yarn start`
+
+You should see the text `hello world!` printed to the screen. 
+
+3. Feel free to open the `src/index.js` file and play around there, running `yarn start` after each save to see how your changes affect how the program runs. 
 
