@@ -1,4 +1,4 @@
-import { addTwoNumbers, areValuesEqual, getLargestNumber, isNumberDivisibleBy5, isNumberEven, isStringDavid, squareNumber, thisFunctionReturnsTrue } from ".";
+import { addTwoNumbers, areValuesEqual, getLargestNumber, isNumberDivisibleBy5, isNumberEven, isStringDavid, squareNumber, thisFunctionReturnsTrue } from "./index";
 
 
 // This test passes without you having to do anything, 
@@ -74,7 +74,3 @@ describe("areValuesEqual", () => {
 
     }); 
 }); 
-
-
-
-describe ()
