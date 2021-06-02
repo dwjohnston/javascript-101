@@ -1,0 +1,12 @@
+{
+  "name": "lesson-2-syntax",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

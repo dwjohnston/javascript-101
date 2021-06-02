@@ -71,7 +71,8 @@ const myVariable4 = true; // A boolean variable. A boolean is a true/false value
 const myVariable5 = {
     name: "bob"
 }; // An object
-const myVariable6 = () => {
+const myVariable6 = [1,2,3,4] // An array variable. Arrays are basicically lists in programming languages. 
+const myVariable7 = () => {
     console.log("hello!"); 
 };  // A function 
 
@@ -92,6 +93,23 @@ There are two other keywords than can be used to create variables.
 - `var` Is similar to `let` but it's much older and does have some quite technical differences. I generally recommend never using it. 
 
 I'm mentioning them here as you may seem them in other tutorials etc. 
+
+### Variable naming
+
+Different languages and different programmers/programming teams have different conventions about how we name variables. Note that spaces are typically not allowed. 
+
+Here a list of common styles: 
+
+- camelCase - initial lower case, and then following words are upper case. 
+- PascalCase - like camel case, but the first letter is capitalized
+- kebab-case - hyphens seperate the words. 
+- snake_case - underscores seperate the words. 
+
+Note that kebab case is illegal in JavaScript - as the hyphen is interpreted as a 'minus' operation, (see below). 
+
+For our purposes we will stick to camelCase, it's the most common style, and is much easier to write than adding underscores everywhere. 
+
+Note also that as a convention in code we like to use American English. For example if we had a variable for color, I would call it `color` and not `colour`, even though I'm in a country that uses British English. This is because most programming languages use American English and it will get confusing switching between the two. 
 
 ## Math operations 
 
@@ -207,12 +225,249 @@ Bottom line, just always use `===`.
 You can also use `!==` to denote 'not equals'. 
 
 
+### Other comparisons
 
+We can also use do less than /greater than comparisons: 
 
+- `<` Less than
+- `>` Greater than
+- `<=` Less than or equals
+- `>=` Greater than or equals
 
 ## Functions 
 
-A function allows you to repeat the execution of some code 
+A function allows you to repeat the execution of some code in a convenient manner. 
+
+For example, lets say we have some code where we want to determine if a series of numbers are: even, a whole number, and what their square is. 
+
+So for one number, our code might look like; 
+
+```javascript
+const theNumber = 2; 
+
+const numberIsEven = (theNumber%2) === 0; 
+const numberIsWhole = (theNumber%1) === 0; 
+const square = theNumber * theNumber; 
+
+if (numberIsEven) {
+    console.log("The number is EVEN"); 
+}else {
+    console.log("The number is ODD");
+}
+
+if (numberIsWhole) }{
+    console.log("The number is WHOLE); 
+}else {
+    console.log("The number is NOT WHOLE"); 
+};
+
+console.log("The number's square is" + square); 
+
+```
+
+But what if we wanted to do this for three numbers? 
+
+```
+const firstNumber = 2; 
+const secondNumber = 4.2; 
+const thirdNumber = 9; 
+```
+
+We could copy paste that above code and modify it slightly, but that would be pain. 
+
+Instead, we can declare a function do do this functionality for us. 
+
+We can declare functions in two ways: 
+
+### the `function` keyword. 
+
+```javascript 
+function myFunction(functionArgument1, functionArgument2) {
+    // Function implementation goes here. 
+
+    return "my return value"; 
+}
+```
+### Arrow functions 
+
+```javascript 
+const myArrowFunction = (functionArgument1, functionArgument2) => {
+    // function implementation goes here
+
+    return "my return value"; 
+}
+```
+
+For the purposes of this lesson, these two are are the same. There is a difference in how they behave, but we don't need to worry about that for now. 
+
+### Anatomy of a function 
+
+There are three components of the function: 
+
+#### The name: 
+
+`function myFunction` - Just like a variable, we just want this to have a good descriptive name, and we're using the camel case naming convention. 
+
+Generally as a convention, it's good for functions to have a _verb_ name, because functions are a 'doing' action. eg. 'printNumberInformation' or 'getUser' or 'findHighestValue' are all good function names. 
+
+#### The function parameters 
+
+`function myFunction`**`(functionArugment1, functionArgument2)`**`{`
+
+Function parameters, or function arguments are the _input values_ of the function. 
+
+These act as variables that are only available inside the function. 
+
+#### Return statement 
+
+**`return "my return value`**
+
+The return value is the _output value_ of a function. 
+
+
+A function can have many input values, but only one output value. However, if you need to return multiple values from a function, you can always return an array or an object. 
+
+A function doesn't have to return a value. 
+
+
+### Calling a function 
+
+To execute a function we type the function, followed by round parenthesis: 
+
+```javascript
+myFunction("first argument", "second argument"); 
+```
+
+Here we are _passing in_ two values to the function 'first argument' and 'second argument'. 
+
+Note that we don't have to pass values into a function, if it doesn't need them: 
+
+```javascript
+myFunction();
+```
+
+If the function will also return a value, we can assign this to a variable: 
+
+```javascript
+
+const functionResult = myFunction(); 
+```
+
+### Putting it together, our first function. 
+
+So let's get back to our example where we want to print the information about several numbers, we can create a function like this: 
+
+
+```javascript
+function printNumberInformation(theNumber) {
+    const numberIsEven = (theNumber%2) === 0; 
+    const numberIsWhole = (theNumber%1) === 0; 
+    const square = theNumber * theNumber; 
+
+    if (numberIsEven) {
+        console.log("The number is EVEN"); 
+    } else {
+        console.log("The number is ODD");
+    }
+
+    if (numberIsWhole){
+        console.log("The number is WHOLE"); 
+    }else {
+        console.log("The number is NOT WHOLE"); 
+    };
+
+    console.log("The number's square is" + square); 
+}
+```
+
+And then call this with :
+
+```
+printNumberInformation(2); 
+printNumberInformation(4.2); 
+printNumberInformation(9); 
+```
+
+Isn't that a lot easier than copy pasting the code!
+
+## Errors 
+
+We're about ready to start coding, so let's talk about errors. 
+
+Errors are a special kind of object that help deal with when things have gone wrong, or more likely, the programmer has made a mistake. 
+
+(Note though, all computer programs should expect errors to occur and just deal with them in a manner than keeps the application going, we will discuss this in a later lesson). 
+
+Errors provide the following functionality: 
+
+- Stop the program executing at the point the the code encountered the error. 
+- Provide a message that helps understand what went wrong 
+- Provide a _stacktrace_ - a list of of the steps the program took to enounter the error. 
+- Allow the program to recover from the error at a point where it is practical.
+
+We call the process of creating one of these error objects and having it stop the program execution until its recovery process 'throwing an error' and we will talk more about _catching_ errors in another lesson.  
+
+### Creating an error
+
+So how can we create an error? Just write some code that doesn't make sense!
+
+For example: 
+
+```
+const myValue = "hello"; 
+myValue(); 
+```
+
+`myValue` isn't a function, it's a string! This code throws the following error: 
+
+```
+Uncaught TypeError: myValue is not a function
+    at <anonymous>:1:1
+```
+
+So we can see the error message is being helpful - it is telling us what is wrong - myValue is not a function. 
+
+Some other errors we can create: 
+
+If we just type some gobblygook we will get a syntax error or a reference error: 
+
+```javascript
+asdfsad; 
+```
+
+```
+Uncaught ReferenceError: asdfsad is not defined
+    at <anonymous>:1:1
+```
+
+Realistically we might encounter this kind of error if we have made a typo: 
+
+```javascript
+function myFunction( {   // note the missing closing parenthesis
+    console.log("hello"); 
+}
+
+```
+
+```
+Uncaught SyntaxError: Unexpected token '.'
+```
+
+Here JavaScript is trying to be helpful in telling us where the syntax error is by telling us where the code stopped making sense to it. (The `.` it is refering to is the one between `console` and `log`). 
+
+## Let's write some code!
+
+The way this and later exercises will be structured is using a tool called Jest. 
+
+Jest is a JavaScript testing framework.
+
+I will write some tests, and you have to implement functions such that tests pass. 
+
+
+
+
+
+
 
 
 
