@@ -475,6 +475,86 @@ Jest is a JavaScript testing framework.
 
 I will write some tests, and you have to implement functions such that tests pass. 
 
+## Exercise 2 - Making some tests pass
+
+Navigate to this directory in your terminal (`lesson-2-syntax`). 
+
+First we need to install dependencies required to make this code (the test framework), write: 
+
+```
+yarn
+```
+
+
+Now start the tests running with: 
+
+```
+yarn start
+```
+
+You should see a big list of failing tests ending with: 
+
+```
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 2 passed, 8 total
+Snapshots:   0 total
+Time:        0.215 s, estimated 1 s
+Ran all test suites.
+
+Watch Usage: Press w to show more.
+```
+
+Note that Jest is an interactive CLI tool. 
+
+Press `w` for more 
+
+It now gives you a menu you can interacte with. 
+
+Press `i` to run the tests one at a time. 
+
+```
+  ● squareNumber › does what is expected
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: undefined
+
+      24 | describe("squareNumber", () => {
+      25 |     it ("does what is expected", () => {
+    > 26 |         expect(squareNumber(2)).toBe(4);
+         |                                 ^
+      27 |         expect(squareNumber(-3)).toBe(9);
+      28 |     });
+      29 | });
+
+      at Object.it (src/index.test.js:26:33)
+```
+
+Open both `src/index.js` and `src/index.test.js`, it might be nice to lay them side by side in your IDE. 
+
+In `src/index.js` you will see a series of empty functions. 
+
+In `src/index.test.js` there is a series of corresponding tests to describe what the functions should do. 
+
+For example in the test file we have: 
+
+```javascript
+describe("squareNumber", () => {
+    it ("does what is expected", () => {
+        expect(squareNumber(2)).toBe(4); 
+        expect(squareNumber(-3)).toBe(9); 
+    }); 
+}); 
+```
+
+And this is saying more or less what it looks like, we expect that we we call the `squareNumber` function with `2` then the result is `4`, and we call it with `-3` the result is `9`. 
+
+The task for this exercise is to implement all the functions such that the tests pass. 
+
+
+
+
 
 
 

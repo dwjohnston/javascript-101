@@ -10,7 +10,7 @@
     "jest": "^27.0.3"
   },
   "scripts": {
-    "start": "jest  --watch"
+    "start": "jest  --watchAll"
   },
   "dependencies": {
     "@babel/core": "^7.14.3"
