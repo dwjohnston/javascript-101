@@ -504,7 +504,7 @@ Ran all test suites.
 Watch Usage: Press w to show more.
 ```
 
-Note that Jest is an interactive CLI tool. 
+Note that Jest is an interactive CLI (command line interface) tool. 
 
 Press `w` for more 
 
