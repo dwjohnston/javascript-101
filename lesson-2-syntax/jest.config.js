@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-module.exports= {
+module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -14,7 +14,7 @@ module.exports= {
   // cacheDirectory: "/private/var/folders/3_/7t918q9d1g9cpw7l31bzdmpwd8z945/T/jest_7db7np",
 
   // Automatically clear mock calls and instances between every test
-  clearMocks: true,
+  // clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -172,9 +172,7 @@ module.exports= {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-"transform": {
-  "\\.[jt]sx?$": "babel-jest"
-},
+  // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
