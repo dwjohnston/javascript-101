@@ -254,7 +254,7 @@ For example, lets say we have some code where we want to determine if a series o
 
 So for one number, our code might look like; 
 
-```javascript
+```
 const theNumber = 2; 
 
 const numberIsEven = (theNumber%2) === 0; 
@@ -267,13 +267,13 @@ if (numberIsEven) {
     console.log("The number is ODD");
 }
 
-if (numberIsWhole) }{
-    console.log("The number is WHOLE); 
+if (numberIsWhole) {
+    console.log("The number is WHOLE"); 
 }else {
     console.log("The number is NOT WHOLE"); 
 };
 
-console.log("The number's square is" + square); 
+console.log("The number's square is " + square); 
 
 ```
 
