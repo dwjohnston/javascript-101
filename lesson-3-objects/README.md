@@ -181,17 +181,48 @@ This becomes important we we talk about object equality.
 
 Say I do something like this: 
 
-```
+```javascript
 const objA = {
     value: 1
 }; 
 
 const objB = {
-    value: 2
+    value: 1
 }; 
 
 const objectsAreEqual = objA === objectB; 
 console.log(objectsAreEqual);
 
 ```
+
+What do you think the output of this code is? `true`? 
+
+Nope! It's false. 
+
+The reason is, when we are doing an equality operation, we are not checking that 'the two objects contain the exact same values' - we are checking that _they are the value_. 
+
+To explain this watch this video: 
+
+(Find a video). 
+
+## Object prototype 
+
+Oh boy! We're really getting into the weeds here. Should really call this series _Advanced JavaScript_. 
+
+All objects have a _prototype_. You can access the prototype via the `__proto__` property. 
+
+```javascript
+const emptyObj = {}; 
+console.log(emptyObj.__proto__);  //{}
+``` 
+
+In this case the prototype is an empty object. 
+
+Note that the `__proto__` property uses underscores. This doesn't do anything special, in JavaScript is just another character like letters are, but as a convention underscores, and especially double underscores  are used to mean 'be careful with this thing, we don't want you accidently changing this'. 
+
+The reason I'm mentioning prototypes here, is because in the next lesson, Arrays, arrays have functions that live on the prototype, in case you were wondering where they came from. 
+
+## Conclusion 
+
+Objects are convenient way to group data together. 
 

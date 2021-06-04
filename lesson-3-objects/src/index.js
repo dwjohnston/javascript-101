@@ -54,3 +54,19 @@ const valueC = {
 }; 
 
 console.log(valueC); 
+
+
+const objA = {
+    value: 1
+}; 
+
+const objB = {
+    value: 1
+}; 
+
+const objectsAreEqual = objA === objB; 
+console.log(objectsAreEqual);
+
+
+const emptyObj = {}; 
+console.log(emptyObj.__proto__); 
