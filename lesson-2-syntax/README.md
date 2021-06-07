@@ -492,6 +492,8 @@ Now start the tests running with:
 yarn start
 ```
 
+ (or `yarn start:windows` if you are using git bash in Windows, [see here](https://stackoverflow.com/a/63938553/15812488)
+
 You should see a big list of failing tests ending with: 
 
 ```
