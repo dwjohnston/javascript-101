@@ -12,7 +12,7 @@
   "scripts": {
     "test": "jest", 
     "start": "jest  --watchAll", 
-    "start:windows": "winpty npm.cmd test"
+    "start:windows": "winpty npm.cmd start"
   },
   "dependencies": {
   }

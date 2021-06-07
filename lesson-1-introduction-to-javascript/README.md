@@ -81,7 +81,7 @@ This brings us to our first exercise:
 ## Exercise 1 - Hello World!
 
 1.  In your terminal, navigate to this folder (`lesson-1-introduction-to-javascript`). 
-2. Run `yarn start`
+2. Run `yarn start` (or `yarn start:windows` if you are using git bash in Windows, [see here](https://stackoverflow.com/a/63938553/15812488)). 
 
 You should see the text `hello world!` printed to the screen. 
 

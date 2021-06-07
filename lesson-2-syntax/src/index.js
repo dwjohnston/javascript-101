@@ -16,6 +16,7 @@ export function addTwoNumbers(a, b) {
 // ie. only type betwen to the two curly brackets
 
 export function squareNumber(number){
+sdffds
 
 }
 
