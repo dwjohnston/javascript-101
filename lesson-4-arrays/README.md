@@ -52,7 +52,7 @@ Some languages have made arrays start at 1, and they get mocked:
 We can access the elements on an array using the square brackets: 
 
 ```javascript
-const letters = ['a', 'b', 'b']; 
+const letters = ['a', 'b', 'c']; 
 const firstLetter = letters[0]; //'a'
 const secondLetter = letters[1]; //'b'
 ```
@@ -62,6 +62,62 @@ In JavaScript, if you try access an array position that doesn't exist, you will 
 ```javascript
 const fourthLetter = letters[3]; 
 console.log(fourthLetter); //undefined
+```
+
+## Array length
+
+You can get the array length with the `.length` property:
+
+```javascript
+const arrayLength = letters.length; 
+console.log(arrayLength); //3; 
+```
+
+Note! The last element with the length - 1! 
+
+```javascript
+const lastLetter = letters[arrayLength -1]; 
+console.log(lastLetter); //'c'; 
+```
+
+🤔 This is where python is nice, in that you can access the last elmeent of an array with `-1` and the second to last with `-2` and so fourth.
+
+## Using multidimensional arrays
+
+Accessing elements on a 2d array is fairly straight forward: 
+
+for example, if we have an array like 
+
+```javascript
+const my2dArray = [
+    [0, 1, 2], 
+    [3, 4, 5], 
+    [6, 7, 8]
+]; 
+```
+
+We just chain the `[]` brackets like so: 
+
+```javascript
+const el0 = my2dArray[0][0]; 
+const el4 = my2dArray[1][1]; 
+const el5 = my2dArray[1][2]; 
+
+console.log(el0, el4, el5); //0 4 5
+```
+
+Where the first set of square brackets accesses the outside array, and the second set accesses the inner array. 
+
+## Copying, merging arrays. 
+
+Just like with objects, you can copy and/or merge arrays with the `...` spread operator. 
+
+```javascript
+const array1 = [1,2,3]; 
+const array2 = [5,6,7]; 
+
+const array3 = [...array1, ...array2]; 
+console.log(array3); //[ 1, 2, 3, 5, 6, 7 ]
 ```
 
 
@@ -132,10 +188,64 @@ In this case we are doing something very similar as the `forEach` example, excep
 Filter does what it sounds like, it filters the array, according to a condition that you define: 
 
 ```javascript
+
+const numbers = [1,2,3,4,5]; 
+
 const oddNumbers = numbers.filter((v) => {
     return v%2 === 1; 
 }); 
 
-console.log(oddNumbers)
+console.log(oddNumbers); //[ 1, 3, 5 ]
 ```
+
+In this case, the lambda function expects to return a boolean value, and if the value is true, it will include the element in the returned array. 
+
+### find
+
+Find is similar to `filter` but it just returns the first value that fufills the lambda function: 
+
+```javascript
+const foundOddNumber = numbers.find((v) => {
+    return v%2 === 1; 
+}); 
+
+console.log(foundOddNumber); //1
+```
+
+### some 
+
+Some will return true if at least one element in the array satisifies the lambda condition: 
+
+```javascript
+const someNumbersAreGreaterThanThree = numbers.some((v) => {
+    return v > 3; 
+}); 
+
+console.log(someNumbersAreGreaterThanThree); //true
+```
+
+### every 
+
+Every is like `some` but only returns true if _all_ elements satisfy the lambda condition: 
+
+```javascript
+const allNumbersAreGreaterThanThree = numbers.every((v) => {
+    return v > 3; 
+}); 
+
+console.log(allNumbersAreGreaterThanThree); //false
+```
+
+## Exercise
+
+Navigate to this directory (`lesson-4-arrays`) in your terminal. 
+
+Install required dependencies with `yarn`.
+
+Start the tests running with `yarn start` (or `yarn start:windows` if you are using Windows). 
+
+Implement the functions in `src/exercise.js` such that the tests pass. You can examine the tests  in `src/exercise.test.js` to see what the functions should do. 
+
+
+ 
 
