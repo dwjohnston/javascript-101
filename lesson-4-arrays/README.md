@@ -45,7 +45,7 @@ In most, but not all, programming langauges, including JavaScript, the first ele
 
 Some languages have made arrays start at 1, and they get mocked: 
 
-![alt text](./assets/image2.jpeg)
+![alt text](./assets/imag2.jpeg)
 
 ## Accessing elements on an array 
 
