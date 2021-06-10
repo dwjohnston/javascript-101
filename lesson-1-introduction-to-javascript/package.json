@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT", 
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js", 
+    "start:windows" : "yarn start"
   }
 }

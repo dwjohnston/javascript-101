@@ -59,7 +59,7 @@ Go to the console tab and you can start writing code there.
 
 ### NodeJS
 
-NodeJS is a JavaScript runtime that you can install on your computer, you can get it here:  =
+NodeJS is a JavaScript runtime that you can install on your computer, you can get it here: 
 https://nodejs.org/en/
 
 You can execute some JavaScript by running `node myfile.js` where `myfile.js` contains your JavaScript code. 
