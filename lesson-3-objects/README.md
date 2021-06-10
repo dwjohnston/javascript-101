@@ -213,12 +213,23 @@ Oh boy! We're really getting into the weeds here. Should really call this series
 
 All objects have a _prototype_. You can access the prototype via the `__proto__` property. 
 
+**For this exercise, we need to use the browser**. 
+
+(The reason we need to use the browser, is because the NodeJS runtime doesn't have a convenient way of printing the prototype). 
+
+Open your browser, press F12 and then in console type 
+
 ```javascript
 const emptyObj = {}; 
-console.log(emptyObj.__proto__);  //{}
+emptyObj.__proto__; 
 ``` 
 
-In this case the prototype is an empty object. 
+You will see a prototype like: 
+
+![alt text](./assets/prototype.png)
+
+We can see that the object has some functions like `toString` and `hasOwnProperty`. We don't need to use these now, or anytime in a forseeable future, but just know that they are there. 
+
 
 Note that the `__proto__` property uses underscores (`_`). This doesn't do anything special, in JavaScript the underscore is just another character like letters are, but as a convention underscores, and especially double underscores  are used to mean 'be careful with this thing, we don't want you accidently changing this'. 
 
