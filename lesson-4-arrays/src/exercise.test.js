@@ -1,142 +1,127 @@
-const { getFirstElement, getSecondElement, getLastElement, getPieceAtPosition, createUsersFromUserNames, doesArrayContainNegativeNumbers, areAllNumbersGreaterThanTwenty } = require("./exercise");
+import {
+  getFirstElement,
+  getSecondElement,
+  getLastElement,
+  getPieceAtPosition,
+  createUsersFromUserNames,
+  doesArrayContainNegativeNumbers,
+  areAllNumbersGreaterThanTwenty,
+  findNumbersLargerThanTen,
+  mergeArrays,
+  createArray,
+} from './exercise';
 
-describe ("getFirstElement", () => {
-    it("does what is expected", () => {
+describe('getFirstElement', () => {
+  it('does what is expected', () => {
+    const array = ['foo', 'bar', 'biz'];
 
-        const array = ['foo', 'bar', 'biz']; 
+    const result = getFirstElement(array);
+    expect(result).toBe('foo');
+  });
+});
 
-        const result = getFirstElement(array); 
-        expect (result).toBe('foo');
-    }); 
-}); 
+describe('getSecondElement', () => {
+  it('does what is expected', () => {
+    const array = ['foo', 'bar', 'biz'];
 
+    const result = getSecondElement(array);
+    expect(result).toBe('bar');
+  });
+});
 
-describe ("getSecondElement", () => {
-    it("does what is expected", () => {
+describe('getLastElement', () => {
+  it('does what is expected', () => {
+    const array = ['foo', 'bar', 'biz'];
 
-        const array = ['foo', 'bar', 'biz']; 
+    const result = getLastElement(array);
+    expect(result).toBe('biz');
 
-        const result = getSecondElement(array); 
-        expect (result).toBe('bar');
-    }); 
-}); 
+    expect(getLastElement(['a', 'b', 'c', 'd'])).toBe('d');
+  });
+});
 
+describe('createArray', () => {
+  it('does what is expected', () => {
+    const result = createArray(1, 2, 'foo');
 
-describe ("getLastElement", () => {
-    it("does what is expected", () => {
+    expect(result).toEqual([1, 2, 'foo']);
+  });
+});
 
-        const array = ['foo', 'bar', 'biz']; 
+describe('getPieceAtPosition', () => {
+  it('does what is expected', () => {
+    // N for 'kNight'.
+    const board = [
+      ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+      ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+      [null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null],
+      ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+      ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+    ];
+    expect(getPieceAtPosition(board, 0, 0)).toBe('R');
+    expect(getPieceAtPosition(board, 3, 0)).toBe('Q');
+    expect(getPieceAtPosition(board, 4, 1)).toBe('P');
+    expect(getPieceAtPosition(board, 2, 4)).toBe(null);
+    expect(getPieceAtPosition(board, 6, 7)).toBe('N');
+  });
+});
 
-        const result = getLastElement(array); 
-        expect (result).toBe('biz');
+describe('mergeArrays', () => {
+  it('does what is expected', () => {
+    const result = mergeArrays(
+      ['andy', 'alice', 'bob'],
+      ['joan', 'george', 'jill']
+    );
 
-        expect(getLastElement(['a','b','c','d'])).toBe('d');
-    }); 
-}); 
+    expect(result).toEqual(['andy', 'alice', 'bob', 'joan', 'george', 'jill']);
+  });
+});
 
+describe('createUsersFromUsernames', () => {
+  it('does what is expected', () => {
+    const userNames = ['alice', 'brody', 'celine'];
 
+    const result = createUsersFromUserNames(userNames);
 
-describe ("createArray", () => {
-    it("does what is expected", () => {
+    expect(result).toEqual([
+      {
+        name: 'alice',
+      },
+      {
+        name: 'brody',
+      },
+      {
+        name: 'celine',
+      },
+    ]);
+  });
+});
 
-        const result = createArray(1, 2, 'foo'); 
+describe('findNumbersLargerThanTen', () => {
+  it('does what is expected', () => {
+    const result = findNumbersLargerThanTen([1, 2, -10, -100, 100, 101]);
+    expect(result).toEqual([100, 101]);
+  });
+});
 
-        expect(result).toEqual([1,2,'foo']
-    }); 
-}); 
+describe('doesArrayContainNegativeNumbers', () => {
+  it('does what is expected', () => {
+    expect(doesArrayContainNegativeNumbers([1, 2, -10, -100, 100, 101])).toBe(
+      true
+    );
+    expect(doesArrayContainNegativeNumbers([1, 2, 100, 101])).toBe(false);
+  });
+});
 
-
-
-
-describe ("getPieceAtPosition", () => {
-    it("does what is expected", () => {
-
-        // N for 'kNight'. 
-        const board = [
-            ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'], 
-            ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
-            [null, null, null, null, null, null, null, null, ]
-            [null, null, null, null, null, null, null, null, ]
-            [null, null, null, null, null, null, null, null, ]
-            [null, null, null, null, null, null, null, null, ]
-            ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
-            ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'], 
-        ];
-        expect (getPieceAtPosition(board, 0, 0)).toBe('R');
-        expect (getPieceAtPosition(board, 0, 4)).toBe('Q');
-        expect (getPieceAtPosition(board, 1, 4)).toBe('P');
-        expect (getPieceAtPosition(board, 2, 4)).toBe(null);
-        expect (getPieceAtPosition(board, 7, 7)).toBe('N');
-    }); 
-}); 
-
-
-
-describe ("mergeArrays", () => {
-    it("does what is expected", () => {
-
-        const result = mergeArrays(['andy', 'alice', 'bob'], ['joan', 'george', 'jill'])
-
-        expect(result).toEqual(['andy', 'alice', 'bob', 'joan', 'george', 'jill']);
-    }); 
-}); 
-
-
-describe ("createUsersFromUsernames", () => {
-    it("does what is expected", () => {
-
-        const userNames = [
-            'alice', 
-            'brody', 
-            'celine'
-        ]; 
-
-
-        const result = createUsersFromUserNames(userNames); 
-
-        expect(result).toEqual([
-            {
-                name: "alice",
-            }, {
-                name: "brody", 
-            }, 
-            {
-                name: "celine"
-            }
-        ]);
-       
-    }); 
-}); 
-
-
-describe ("findNumbersLargerThanTen", () => {
-    it("does what is expected", () => {
-
-        const result = findNumbersLargerThanTen([1,2, -10, -100, 100, 101]); 
-        expect(result).toEqual([100, 101]);
-    }); 
-}); 
-
-describe ("doesArrayContainNegativeNumbers", () => {
-    it("does what is expected", () => {
-
-        expect(doesArrayContainNegativeNumbers([1,2, -10, -100, 100, 101])).toBe(true); 
-        expect(doesArrayContainNegativeNumbers([1,2, 100, 101])).toBe(false); 
-
-    }); 
-}); 
-
-
-
-describe ("areAllNumbersGreaterThanTwenty", () => {
-    it("does what is expected", () => {
-
-        expect(areAllNumbersGreaterThanTwenty([1,2, -10, -100, 100, 101])).toBe(false); 
-        expect(areAllNumbersGreaterThanTwenty([1,2, 100, 101])).toBe(false); 
-        expect(areAllNumbersGreaterThanTwenty([10002, 100, 101])).toBe(true); 
-
-
-    }); 
-}); 
-
-
+describe('areAllNumbersGreaterThanTwenty', () => {
+  it('does what is expected', () => {
+    expect(areAllNumbersGreaterThanTwenty([1, 2, -10, -100, 100, 101])).toBe(
+      false
+    );
+    expect(areAllNumbersGreaterThanTwenty([1, 2, 100, 101])).toBe(false);
+    expect(areAllNumbersGreaterThanTwenty([10002, 100, 101])).toBe(true);
+  });
+});
