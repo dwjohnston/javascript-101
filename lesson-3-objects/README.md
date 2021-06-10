@@ -199,13 +199,13 @@ What do you think the output of this code is? `true`?
 
 Nope! It's false. 
 
-The reason is, when we are doing an equality operation, we are not checking that 'the two objects contain the exact same values' - we are checking that _they are the value_. 
+The reason is, when we are doing an equality operation, we are not checking that 'the two objects contain the exact same values' - we are checking that _they are the same value_. 
 
 To explain this watch this video: 
 
 https://www.youtube.com/watch?v=IX3fDYz0WyM
 
-
+The point to highlight is that while primitive values are directly stored 'on the stack' as such, with objects we store _just a pointer to that object_ on the stack. When we do a `===` comparrison, we are comparing the values that are on the stack, not the objects themselves. 
 
 ## Object prototype 
 
@@ -220,11 +220,25 @@ console.log(emptyObj.__proto__);  //{}
 
 In this case the prototype is an empty object. 
 
-Note that the `__proto__` property uses underscores. This doesn't do anything special, in JavaScript is just another character like letters are, but as a convention underscores, and especially double underscores  are used to mean 'be careful with this thing, we don't want you accidently changing this'. 
+Note that the `__proto__` property uses underscores (`_`). This doesn't do anything special, in JavaScript the underscore is just another character like letters are, but as a convention underscores, and especially double underscores  are used to mean 'be careful with this thing, we don't want you accidently changing this'. 
 
 The reason I'm mentioning prototypes here, is because in the next lesson, Arrays, arrays have functions that live on the prototype, in case you were wondering where they came from. 
 
 ## Conclusion 
 
 Objects are convenient way to group data together. 
+
+
+## Exercise
+
+Navigate to this directory (`lesson-3-objects`) in your terminal. 
+
+Install required dependencies with `yarn`.
+
+Start the tests running with `yarn start` (or `yarn start:windows` if you are using Windows). 
+
+Implement the functions in `src/exercise.js` such that the tests pass. You can examine the tests  in `src/exercise.test.js` to see what the functions should do. 
+
+
+ 
 
