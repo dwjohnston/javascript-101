@@ -53,7 +53,7 @@ const valueC = {
     ...valueB,
 }; 
 
-console.log(valueC); 
+console.log(valueC); //{ a: 1, b: 2, c: 3, d: 4 }
 
 
 const objA = {

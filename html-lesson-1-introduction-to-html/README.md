@@ -131,8 +131,8 @@ For example the link in the above code has three attributes:
 ```
 
 The `href` (Hypertext REFerence) attribute tells the tag what URL to link to. 
-The `target=_blank` attribute tells it to open in a new window
-The `rel="noreferrer"` attribute gives instructions to your browser not to provide referrer information to the new webpage. It's used for security concerns. [See a discussion here, if you are interested](https://stackoverflow.com/questions/50773152/when-should-i-use-rel-noreferrer). 
+The `target="_blank"` attribute tells it to open in a new window
+The `rel="noreferrer"` attribute gives instructions to your browser not to provide referrer information to the new webpage. It's used for security concerns. [See a discussion here, if you are interested](https://stackoverflow.com/questions/50773152/when-should-i-use-rel-noreferrer), and in particular [this answer](https://stackoverflow.com/a/50779400/1068446) which explains why you should use it when using `target=_"blank"`). 
 
 
 ## This looks kind of plain
@@ -189,6 +189,8 @@ The `<strong>` tag is like a span, but in browsers it typically applies a bold f
 The `<a>` tag (['a' for anchor](https://stackoverflow.com/questions/39434659/what-does-the-a-in-the-html-a-tag-stand-for), if you wondering) creates a link. 
 
 We covered it earlier, but the the most important attribute on the `<a>` tag is the `href` attribute, which tells the browser which URL to visit when the tag is clicked. 
+
+### Forms
 
 
 

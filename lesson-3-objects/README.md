@@ -152,8 +152,22 @@ Then the new object would have a `value` of `1`.
 
 The spread operator can be used to merge two objects together: 
 
-```
+```javascript
+const valueA = {
+    a: 1, 
+    b: 2, 
+}
+const valueB = {
+    c: 3, 
+    d: 4
+}; 
 
+const valueC = {
+    ...valueA, 
+    ...valueB,
+}; 
+
+console.log(valueC); //{ a: 1, b: 2, c: 3, d: 4 }
 ```
 
 
