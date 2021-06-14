@@ -64,7 +64,7 @@ HTML makes use of angle bracket tags, here is an example HTML document:
 
 ## Exercise 1
 
-Navigate to this directory (`html-lesson-1-introduction-to-html`) in your terminal. 
+Navigate to this directory (`lesson-130-introduction-to-html`) in your terminal. 
 
 Install the dependencies with `yarn`. 
 

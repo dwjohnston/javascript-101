@@ -238,7 +238,7 @@ console.log(allNumbersAreGreaterThanThree); //false
 
 ## Exercise
 
-Navigate to this directory (`lesson-4-arrays`) in your terminal. 
+Navigate to this directory (`lesson-104-arrays`) in your terminal. 
 
 Install required dependencies with `yarn`.
 

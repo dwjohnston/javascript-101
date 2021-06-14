@@ -256,7 +256,7 @@ Objects are convenient way to group data together.
 
 ## Exercise
 
-Navigate to this directory (`lesson-3-objects`) in your terminal. 
+Navigate to this directory (`lesson-103-objects`) in your terminal. 
 
 Install required dependencies with `yarn`.
 

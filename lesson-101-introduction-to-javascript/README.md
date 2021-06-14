@@ -80,7 +80,7 @@ This brings us to our first exercise:
 
 ## Exercise 1 - Hello World!
 
-1.  In your terminal, navigate to this folder (`lesson-1-introduction-to-javascript`). 
+1.  In your terminal, navigate to this folder (`lesson-101-introduction-to-javascript`). 
 2. Run `yarn start`
 
 You should see the text `hello world!` printed to the screen. 

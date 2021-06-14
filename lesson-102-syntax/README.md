@@ -477,7 +477,7 @@ I will write some tests, and you have to implement functions such that tests pas
 
 ## Exercise 2 - Making some tests pass
 
-Navigate to this directory in your terminal (`lesson-2-syntax`). 
+Navigate to this directory in your terminal (`lesson-102-syntax`). 
 
 First we need to install dependencies required to make this code (the test framework), write: 
 
