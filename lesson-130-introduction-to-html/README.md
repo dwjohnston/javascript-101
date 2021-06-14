@@ -30,12 +30,11 @@ HTML makes use of angle bracket tags, here is an example HTML document:
     <label> I am a text input label <input type="text" /> </label>
     <p>I am a paragraph!</p>
 
-    <p> I am a paragraph, and I <a href="https://github.com/dwjohnston/javascript-101" rel="noreferrer"
-            target="_blank">contain a link</a></p>
+    <p> I am a paragraph, and I <a href="https://github.com/dwjohnston/javascript-101">contain a link</a></p>
 
     <h2>I am a smaller heading</h2>
 
-    <p>Lorem ipsum text follows - <a href="https://www.lipsum.com/" rel="noreferrer" target="_blank">lorem ipusm
+    <p>Lorem ipsum text follows - <a href="https://www.lipsum.com/">lorem ipusm
             text</a> is used by designers as place holder text in their content</p>
 
     <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus sapien turpis, eu posuere turpis sagittis
@@ -266,6 +265,8 @@ The HTML here hopefully is fairly self explanatory:
 - `<th>` - Like a `<td>` but for header cells. 
 
 Note that a key useful things about tables is that can keep content aligned with each other - for example in the case where Belinda has a very long name. 
+
+Note that the table comes with it's own default styling - bold and centered in the `<th>` for example. This is all customisable with CSS. 
 
 ### Horizontal rule - hr
 
