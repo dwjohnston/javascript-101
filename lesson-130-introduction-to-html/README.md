@@ -123,18 +123,13 @@ Tags can be  _self closing like `<input/>` - where we are saying that is an elem
 
 The attributes apply to the opening tag only. They are additional properties you are passing to the tag, that change how it behaves. You can think of them like arguments you would pass to a function. 
 
-For example the link in the above code has three attributes: 
+For example the link in the above code has a `href` attribute: 
 
 ```html
-<a href="https://github.com/dwjohnston/javascript-101" rel="noreferrer"
-            target="_blank">
+<a href="https://github.com/dwjohnston/javascript-101">
 ```
 
 The `href` (Hypertext REFerence) attribute tells the tag what URL to link to. 
-The `target="_blank"` attribute tells it to open in a new window
-The `rel="noreferrer"` attribute gives instructions to your browser not to provide referrer information to the new webpage. It's used for security concerns. [See a discussion here, if you are interested](https://stackoverflow.com/questions/50773152/when-should-i-use-rel-noreferrer), and in particular [this answer](https://stackoverflow.com/a/50779400/1068446) which explains why you should use it when using `target=_"blank"`). 
-
-
 ## This looks kind of plain
 
 You're right! I told you to imagine we were going back to the internet of the early 90s 😉
@@ -147,7 +142,7 @@ Navigate to `http://localhost:5000/exercise2`
 
 The code that is used in the rest of the lesson is displayed here. 
 
-I mentioned CSS - this document contains a small amount of CSS to highlight elements, that will otherwise not be immediately apparent.
+Because it might not be immediately apparent which element is which, I've added a little bit of CSS to add a dotted border around the elements I'm talking about. However, I would encourage you to use the inspector to highlight them yourself. 
 
 There are a lot of HTML tags, [here's a good list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) we are going to quickly cover some of more commonly used ones here, but for an indepth look at how to use the tags correctly, that page is going to do a better job than me, and infact I'm just going to be regurgitating what I read there. 
 
@@ -177,6 +172,13 @@ Note that the `<p>` tag naturally gives spacing, called _margin_ above and below
 ```html
     <p> I am a paragraph!</p>
     <p> I am another paragraph!</p>
+
+    <p><span>I am a span inside a paragraph!</span> I am text that isn't in a span </p>
+    <p><span> I am a very long span. Notice how I wrap, but I don't create a box like a p does. Suspendisse at sodales sapien, ac efficitur turpis. Aenean sit amet varius mauris. Nullam tincidunt fringilla
+        sem. Maecenas vitae ipsum non sapien tempus eleifend eu at odio. Maecenas tempor nibh eget diam ornare, non
+        eleifend odio dictum. Vestibulum rhoncus nunc sit amet lobortis efficitur. Span ends here.</span> I am text that isn't in a span </p>
+
+    <p><strong>I am strong text</strong></p>
 ```
 
 The `<span>` tag is an _inline_ element, think of it as 'words within a paragraph'. 
@@ -188,20 +190,106 @@ The `<strong>` tag is like a span, but in browsers it typically applies a bold f
 
 The `<a>` tag (['a' for anchor](https://stackoverflow.com/questions/39434659/what-does-the-a-in-the-html-a-tag-stand-for), if you wondering) creates a link. 
 
-We covered it earlier, but the the most important attribute on the `<a>` tag is the `href` attribute, which tells the browser which URL to visit when the tag is clicked. 
+We covered it earlier, but `<a>` tag is usually used with the `href` attribution, which tells the browser which URL to visit when the tag is clicked. 
 
-### Forms
+### Layout components - div, article, section, 
 
-
-
-
-
+The `<div>` `<article>` and `<section>` all _visually_ behave the the same way - they are just a way of grouping some content. 
 
 ```html
-    <p><span>I am a spam inside a paragraph!</span> I am text that isn't in a span </p>
-    <p>Note that the span wraps, but doesn't create a full box like the paragraphs do, we will talk about block vs inline content later. <span>  Suspendisse at sodales sapien, ac efficitur turpis. Aenean sit amet varius mauris. Nullam tincidunt fringilla
-        sem. Maecenas vitae ipsum non sapien tempus eleifend eu at odio. Maecenas tempor nibh eget diam ornare, non
-        eleifend odio dictum. Vestibulum rhoncus nunc sit amet lobortis efficitur.</span> I am text that isn't in a span </p>
-
-    <p><strong>I am strong text</strong></p>
+    <div> 
+        <p>I am a paragraph inside a div</p>
+    </div>
+    <section> 
+        <p>I am a paragraph inside a section</p>
+    </section>
+    <article> 
+        <p>I am a paragraph inside an article</p>
+    </article>
 ```
+
+So why are there three different tags that do the same thing? The answer is _semantic HTML_. 
+
+Semantic HTML is the concept that as developers we try to write our HTML in a way that makes readable sense. 
+
+That is - while visually on a broswer they may look exactly the same, they do not have the same behaviour for: 
+
+ - Someone using a screen reader to read your page
+ - A computer, (such as a Google webcrawler) reading your page. 
+ - The HTML reads differently to a developer reading the HTML - that is - I would expect that the content inside an `<article>` would contain a the main body of text, and not say, a user profile card. 
+
+
+
+### Tables - table, tr, td, thead, th
+
+Tables were one of the very first elements to be created in HTML - it makes sense - they're very useful for displaying data. 
+
+```html
+    <table> 
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Favourite Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andy</td>
+                <td>11</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <td>Belinda With A Very Long Name</td>
+                <td>33</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>Celine</td>
+                <td>55</td>
+                <td>Orange</td>
+            </tr>
+        </tbody>
+
+    </table>
+```
+
+
+The HTML here hopefully is fairly self explanatory: 
+
+- `<table>` - the whole table
+- `<thead>` - The table head - which is basically header rows. 
+- `<tbody>` - The opposite of the table head - it contains the data itself. 
+- `<tr>` - Table row 
+- `<td>` - Table data - The individual data cell
+- `<th>` - Like a `<td>` but for header cells. 
+
+Note that a key useful things about tables is that can keep content aligned with each other - for example in the case where Belinda has a very long name. 
+
+### Horizontal rule - hr
+
+The `<hr>` tag provides a horizontal rule. I thought I'd mention it given that it is in the example code. 
+
+
+### Images - img
+
+The `<img>` tag can be used to display an image. 
+
+```html
+    <img src="https://place-hold.it/300x300/ff0000" alt ="Placecholder image - red square"/>
+```
+
+We use the `src` tag to tell the browser where to get the image from. The `alt` attribute is for the 'alternate text' - that will be displayed if the image doesn't exist. 
+
+It is also what will be read to a user using a screen reader - so it's important to to include alt attributes to your images. 
+
+In the following snippet I'm intentionally referencing an image that doesn't exist, so you can see the alt text display.
+
+```html
+    <img src="https://example.com/idontexist.jpg" alt ="Image that does not exist"/>
+
+```
+
+
+
