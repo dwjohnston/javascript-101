@@ -182,3 +182,28 @@ I will likely mention these later
 const valueToUse = Math.random() > 0.5 ? "high number" : "low number"; 
 
 ```
+
+
+## Error handling, try/catch
+
+I will mention this later
+
+```javascript
+
+function someFunctionThatMightThrowAnError() {
+    if (Math.random() > 0.5) {
+        throw new Error("An error!"); 
+    }
+    else {
+        return 1; 
+    }
+}
+
+
+try {
+    someFunctionThatMightThrowAnError(); 
+} catch(err){
+    console.log("oh no an error occured!"); 
+}
+
+```
