@@ -1,11 +1,11 @@
 The following is a list of syntax and language features that I haven't taught you. 
 
-It is not intented to actually explain what they are or how to use them, it's just to note that they exist so just incase you see them in the wild, you know that I've intentionally left them out: 
+It is not intended to actually explain what they are or how to use them, it's just to note that they exist so just incase you see them in the wild, you know that I've intentionally left them out: 
 
 
 ## For and while loops
 
-I've left these out because they necesserily require variable reassigment
+I've left these out because they necessarily require variable reassignment
 
 ```javascript
 for (let i =0; i<10; i++){
@@ -28,7 +28,7 @@ while (keepGoing) {
 
 ## Classes 
 
-Classes are used in an object oriented style of programming, which necesserily requires object mutatioon. 
+Classes are used in an object oriented style of programming, which necessarily requires object mutation. 
 
 ```javascript
 class Apple {
@@ -70,7 +70,7 @@ I will likely mention this later
 const user = {
     name: "bob", 
     age: 10, 
-    favouriteColor: "blue"
+    favoriteColor: "blue"
 }; 
 
 const {name} = user; 
@@ -87,7 +87,7 @@ I've taught the `...spread` operator, the rest operator applies similarly when u
 const user = {
     name: "bob", 
     age: 10, 
-    favouriteColor: "blue"
+    favoriteColor: "blue"
 }; 
 
 const {name, ...rest} = user; 
@@ -128,7 +128,7 @@ I will likely mention this later.
 const user = {
     name: "bob", 
     age: 10, 
-    favouriteColor: "blue"
+    favoriteColor: "blue"
 }; 
 
 const name = user["name"]; 
