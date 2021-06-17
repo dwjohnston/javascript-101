@@ -26,7 +26,7 @@ mkdir git-workspace
 Navigate to that folder
 
 ```bash
-ch git-workspace
+cd git-workspace
 ```
 
 Clone this repo: 
