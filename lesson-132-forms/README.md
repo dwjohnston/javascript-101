@@ -21,7 +21,7 @@ The text input allows the user to enter text.
 
 Checkboxes allow users to select _one or many_, from a list of options. 
 
-### radiobutton 
+### radio button 
 
 Radio buttons allow the user to select _one_ from a list of options. 
 
@@ -31,8 +31,11 @@ The reason it is called a radio button is because it's based on those old push/p
 
 ### select
 
+Functionally, a select achives the same purpose as a radio button list, it allows the user to select one of a list of options. 
 
 ### text-like inputs
+
+There are other inputs that look the same as a 
 
 ### submit 
 
