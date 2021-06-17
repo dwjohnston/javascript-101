@@ -6,7 +6,7 @@ You will need:
 - A terminal (A linux/mac machine already comes with one, for Windows users, use Git Bash - see below) 
 - VSCode - [get it here](https://code.visualstudio.com/)
 - Git - [get it here](https://git-scm.com/)
-## Basic command lines commands
+## Basic command line
 
 I encourage you to get comfortable using the command line. 
 
