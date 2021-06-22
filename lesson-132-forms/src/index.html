@@ -6,10 +6,58 @@
 
 <body>
 
-    <form>
-        <input type ="text"/> 
+    <form method ="post" action ="/">
 
-        
+        <div>
+            <input type="text" name ="my-text"/>
+
+        </div>
+
+        <div>
+            <input type="number" name ="my-number" />
+            <input type="email" name ="my-email"/>
+            <input type="tel" name ="my-tel" />
+        </div>
+
+
+        <div>
+            <label>Name:
+                <input type="text" name ="my-text-2"/>
+            </label>
+        </div>
+
+
+        <div>
+            <p>Select your favorite color</p>
+            <label>red <input type="radio" name="color" checked value="red"></label>
+            <label>blue <input type="radio" name="color" value="blue"></label>
+            <label>green <input type="radio" name="color" value="green"></label>
+        </div>
+
+        <div>
+            <p>What pets are in your household?</p>
+            <label>fish<input type="checkbox" name="pets" checked value="fish"></label>
+            <label>cat <input type="checkbox" name="pets" value="cat"></label>
+            <label>dog <input type="checkbox" name="pets" value="dog"></label>
+        </div>
+
+
+        <div>
+            <p>Where were you born</p>
+            <select name ="country-of-birth">
+                <option value ="australia">Australia</option>
+                <option value ="new zealand">New Zealand</option>
+                <option value ="sri lanka">Sri Lanka</option>s
+            </select>
+
+
+        </div>
+
+        <div >
+            <input type = "submit"/>
+        </div>
+
+
     </form>
 
 </body>
