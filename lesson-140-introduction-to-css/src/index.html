@@ -1,0 +1,264 @@
+<html lang="en">
+
+<head>
+    <style>
+        /*
+            Styling without CSS/ Styling with CSS
+        */
+        div {
+            border: solid 2px pink;
+        }
+
+        div span {
+            color: orange;
+        }
+
+        /*
+            ID Examples
+        */ 
+
+        #user-profile {
+            border: 3px solid purple; 
+        }
+
+        #username {
+            color: purple; 
+        }
+
+
+        /*
+            Class Examples
+        */
+
+        .profile-photo-container {
+            width: 500px; 
+            border: solid 1px black; 
+            padding: 12px; 
+        }
+
+        .admin-profile-photo-container {
+            border: solid 10px orange; 
+        }
+
+        /*
+           Basic CSS properties examples
+        */
+
+        .square {
+            width: 100px;
+            height: 100px;
+        }
+
+        .colored {
+            color: pink;
+        }
+
+        .font-sized {
+            font-size: 20px;
+        }
+
+        .background-colored {
+            background-color: pink;
+        }
+
+        .rectangle-no-fixed-height {
+            margin-top: 100px;
+            width: 100;
+        }
+
+
+
+        /*
+            Padding/Margin
+        */
+
+        .dashed-container {
+            background-color: silver;
+            border: dashed 2px black;
+
+            width: 600px;
+        }
+
+        .a-neighbouring-element {
+            background-color: dodgerblue;
+            border: solid 1px blue;
+        }
+
+        .subject-element {
+            background-color: hotpink;
+            border: solid 1px deeppink;
+        }
+
+        .subject-element-with-padding {
+            padding: 40px;
+        }
+
+        .subject-element-with-margin {
+            margin: 20px;
+        }
+
+        .inside-content {
+            border: solid 1px black;
+            background-color: slategrey;
+
+        }
+
+
+        /*
+            CSS property inheritance
+        */
+
+        .has-larger-text {
+            font-size: 24px; 
+            color: purple;
+        }
+
+        .has-smaller-text {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Styling without CSS/Styling with CSS-->
+    <h2>Styling without CSS / Styling with CSS</h2>
+
+    <div style="border: dashed 2px blue; border-radius: 10px;">
+        <span>i am unstyled text</span>
+        <p style="color:red">I am some styled text!</p>
+    </div>
+
+    <div> I am a div</div>
+
+    <span> I am a span that's not in a div</span>
+
+    <div>
+        <p> I am not a span</p>
+        <span>I am span that is in a div</span>
+    </div>
+
+
+    <!-- ID examples-->
+    <h2>ID examples</h2>
+    <div id = "user-profile">
+        <input id ="username" type ="text"/>
+     </div>
+
+
+    <!-- Class examples-->
+    <h2>Class Examples</h2>
+    <div class="profile-photo-container">
+        <img src="https://place-hold.it/300x500" alt="Placeholder 300x500" />
+    </div>
+
+    <div class="profile-photo-container admin-profile-photo-container">
+        <img src ="https://place-hold.it/300x500" alt ="Placeholder 300x500"/>
+    </div>
+
+
+    <!-- Basic CSS properties examples-->
+    <h2>Basic CSS properties examples</h2>
+    <div class="square colored">
+
+    </div>
+    <div class="square font-sized">
+
+    </div>
+    <div class="square bordered">
+
+    </div>
+    <div class="square background-colored">
+
+    </div>
+    <div class="square">
+        <p>I have a little text </p>
+    </div>
+    <div class="square">
+        <p>The problem with fixed sizing is that content can overflow and look bad! </p>
+    </div>
+
+    <div class="rectangle-no-fixed-height">
+        <p> This element has fixed width, but no fixed height, and so the parent just expands to fit the content.</p>
+    </div>
+
+    <!-- Margin and Padding-->
+    <h2>Margin and Padding</h2>
+
+
+    <!-- no padding/margin on the subject-element-->
+    <h3>Without padding/margin</h3>
+    <div class="dashed-container">
+        <p>I am some plain text without a background-color</p>
+        <div class="a-neighbouring-element">Some neighbouring content</div>
+        <div class="subject-element">
+            <div class="inside-content">
+                <p>Suspendisse at sodales sapien, ac efficitur turpis. Aenean sit amet varius mauris. Nullam tincidunt
+                    fringilla
+                    sem. Maecenas vitae ipsum non sapien tempus eleifend eu at odio. Maecenas tempor nibh eget diam
+                    ornare, non
+                    eleifend odio dictum. Vestibulum rhoncus nunc sit amet lobortis efficitur. Ut a tortor at odio
+                    ornare tempus.
+                    Pellentesque non sapien vitae tellus vulputate maximus et eget augue. Curabitur laoreet ex at
+                    aliquam finibus.
+                    Sed orci felis, maximus quis orci eu, fringilla mollis lorem. Etiam at tellus nec lacus semper
+                    pharetra eget sed
+                    elit. Aliquam ornare finibus arcu, in pulvinar arcu convallis vitae. Praesent non convallis mauris,
+                    at placerat
+                    lacus. Pellentesque tempor nulla vitae erat tempor, sit amet iaculis purus vehicula. Pellentesque
+                    quis libero
+                    sit amet urna facilisis tempus ultrices non risus. Ut posuere eleifend egestas.
+                </p>
+            </div>
+        </div>
+        <div class="a-neighbouring-element">Some neighbouring content</div>
+    </div>
+
+    <!-- padding/margin on the subject-element-->
+    <h3>With padding/margin</h3>
+
+    <div class="dashed-container">
+        <p>I am some plain text without a background-color</p>
+        <div class="a-neighbouring-element">Some neighbouring content</div>
+        <div class="subject-element subject-element-with-padding subject-element-with-margin">
+            <div class="inside-content">
+                <p> Suspendisse at sodales sapien, ac efficitur turpis. Aenean sit amet varius mauris. Nullam tincidunt
+                    fringilla
+                    sem. Maecenas vitae ipsum non sapien tempus eleifend eu at odio. Maecenas tempor nibh eget diam
+                    ornare, non
+                    eleifend odio dictum. Vestibulum rhoncus nunc sit amet lobortis efficitur. Ut a tortor at odio
+                    ornare tempus.
+                    Pellentesque non sapien vitae tellus vulputate maximus et eget augue. Curabitur laoreet ex at
+                    aliquam finibus.
+                    Sed orci felis, maximus quis orci eu, fringilla mollis lorem. Etiam at tellus nec lacus semper
+                    pharetra eget sed
+                    elit. Aliquam ornare finibus arcu, in pulvinar arcu convallis vitae. Praesent non convallis mauris,
+                    at placerat
+                    lacus. Pellentesque tempor nulla vitae erat tempor, sit amet iaculis purus vehicula. Pellentesque
+                    quis libero
+                    sit amet urna facilisis tempus ultrices non risus. Ut posuere eleifend egestas.
+                </p>
+            </div>
+        </div>
+        <div class="a-neighbouring-element">Some neighbouring content</div>
+    </div>
+
+
+
+    <!-- Property inheritance-->
+
+    <h2>CSS Property Inheritence</h2>
+    <div class ="has-larger-text">
+        I am text directly iniside the div
+
+        <p>I am a paragraph, I still have the text rule applied to me</p>
+
+        <p class ="has-smaller-text">My text is overriden by my own style rule</p>
+
+    </div>
+
+
+</body>
+
+</html>

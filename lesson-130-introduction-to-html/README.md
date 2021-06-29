@@ -293,6 +293,16 @@ In the following snippet I'm intentionally referencing an image that doesn't exi
 ```
 
 
+### Comments - `<!-- -->`
+
+
+Comments in HTML can be created with `<!-- -->`. Like code comments, they don't do anything, but they can be helpful for the developer. 
+
+```html
+<!-- This is a comment -->
+```
+
+
 
 ## Exercise 
 

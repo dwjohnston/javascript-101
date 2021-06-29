@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("form").addEventListener("submit", (e) => {
+                e.preventDefault(); 
+                const errorEl = document.getElementById("error-message"); 
+
+                errorEl.innerHTML = "Oh dear an error occurred! I should be red!"; 
+            }); 
+        });
+    </script>
+
+    <style>
+
+        header {
+            background-color: darkslategray; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hello World!</h1>
+
+        <p>
+            I am some text. Unfortunately I'm a litte hard to read - can you change my color to yellow?
+        </p>
+        <p> 
+            Also, the text in this green box is a bit jammed against the sides - can you add some spacing between the text and the sides of the box? 
+        </p>
+        
+    </header>
+
+
+    <section>
+        <p> 
+            I am some other text - and I should be black!
+        </p>
+    </section>
+
+
+    <form id ="form">
+        <p id ="error-message"></p>
+        <div>
+            <label>Name:<input name ="name" type = "text"/></label>
+        </p> 
+        <div>
+            <label>Age:<input name ="age" type = "number"/></label>
+        </div> 
+        <div>
+            <input type ="submit"/>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
