@@ -334,9 +334,33 @@ Note that many elements, like `<p>` and the `<h1>`, `<h2>` tags, come with defau
 
 Some CSS properties, typicially properties applying to text,  when applied to a parent element, while apply to all of their children, unless another rule is applied.
 
-For example
+```html
+<div class ="has-larger-text">
+    I am text directly iniside the div
 
+    <p>I am a paragraph, I still have the text rule applied to me</p>
 
+    <p class ="has-smaller-text">My text is overriden by my own style rule</p>
+
+</div>
+```
+
+```css
+
+.has-larger-text {
+    font-size: 24px; 
+    color: purple;
+}
+
+.has-smaller-text {
+    font-size: 10px;
+}
+
+```
+
+In this example the `font-size:24px; color: purple` style applies to the `has-larger-text` element _and all of its children_. 
+
+The element with `has-smaller-text` is one of the `has-larger-text`'s children - but the styles specific to the `.has-smaller-text` rule takes precedence. 
 
 
 ## Exercise

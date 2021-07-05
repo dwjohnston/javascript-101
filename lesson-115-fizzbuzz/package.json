@@ -1,0 +1,10 @@
+{
+  "name": "lesson-115-fizzbuzz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT", 
+
+  "scripts": {
+    "start": "jest"
+  }
+}
