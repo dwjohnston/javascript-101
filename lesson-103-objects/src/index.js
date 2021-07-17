@@ -1,5 +1,16 @@
 
 
+const somePerson = {
+    name: "Danielle", 
+    favoriteColor: "red", 
+    favoriteFood: "apples", 
+    getProfile: () => {
+        return "My name is " + this.name + " my favorite food is " + this.favoriteFood + " and my favorite color is " + this.favoriteColor"; 
+    }
+}
+
+const personProfile = somePerson.getProfile();
+console.log(personProfile);
 
 const initalObject = {
     name: "name", 

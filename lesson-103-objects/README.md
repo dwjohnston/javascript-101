@@ -57,6 +57,12 @@ Here we are using a keyword called `this`, where from the function we are able t
 
 I don't like the `this` keyword and I recommend never using unless you have a very good reason for it. However, I need to mention it, because it will become relevant in the next lesson - Arrays. 
 
+To call a function that exists on an object, you access it via the `.` and call the function with the round brackets `()`. 
+
+```javascript
+const personProfile = somePerson.getProfile();
+```
+
 ## Object mutation 
 
 Until now I've been very reluctant to mention variable reassignment and object mutation, but I figure let's mention this here, only to say 'We aren't doing this'. 
