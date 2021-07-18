@@ -35,12 +35,18 @@ Let's modify the application so that instead of going down on an angle, it first
 
 Think you can do it without any help? 
 
-For this modify the code in `exercise.js`
+### Note about the exercise structure
 
-Note that the `onTick` function is declared as a named function. This is so tests can be written against it. 
+Because creating this 'game' involves a long running process, we're breaking the application into two _modules_ (we have not discussed modules yet).
 
-- Run `yarn start`
-- Implement the `onTick` function such that the tests pass. 
+- `exerciseApplication.js` contains the long running process that calls `startMatrixApplication` - this thing could potentially run indefinitely! So we don't really want to use this in tests. 
+
+- `exercise.js` contains the core logic - the `handleGameTick` function. Note that this is just a plain function!
 
 
+To run the whole application run `yarn start`. You may want to start here to see that your application is doing what is expected, and then run the tests to see if it is passing. 
 
+To run the tests run `yarn test` (or `yarn test:windows` if you are using windows). 
+
+
+Implement `handleGameTick` such that the tests pass. 
