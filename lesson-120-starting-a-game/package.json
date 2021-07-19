@@ -2,19 +2,21 @@
   "name": "lesson-120-starting-a-game",
   "version": "1.0.0",
   "main": "src/index.js",
-  "license": "MIT", 
+  "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.7",
     "@babel/preset-env": "^7.14.4",
     "babel-jest": "^27.0.2",
-    "jest": "^27.0.3",
-    "@babel/core": "^7.14.3"
+    "jest": "^27.0.3"
   },
   "scripts": {
-    "dev": "node src/index.js",
-    "start": "node src/exerciseApplication.js",
+    "dev": "babel-node src/index.js",
+    "start": "babel-node src/exerciseApplication.js",
     "test": "jest  --watchAll",
     "test:windows": "winpty npm.cmd start"
   },
   "dependencies": {
+    "node-cli-character-matrix": "^1.0.1"
   }
 }

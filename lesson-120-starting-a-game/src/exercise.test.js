@@ -11,7 +11,7 @@ describe('handleGameTick', () => {
     const step2 = setCell(createMatrix(10,10), 1, 0, 'X'); 
     const step10 = setCell(createMatrix(10,10), 9, 0, 'X'); 
     const step11 = setCell(createMatrix(10,10), 9, 1, 'X'); 
-    const step12 = setCell(createMatrix(10,10), 8, 2, 'X'); 
+    const step12 = setCell(createMatrix(10,10), 8, 1, 'X'); 
 
     const exitFn = jest.fn(); 
 
