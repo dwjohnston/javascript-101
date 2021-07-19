@@ -186,7 +186,7 @@ const number = 3;
 if (number === 2) {
     console.log("Number is 2!"); 
 } else {
-    console.log("Number is anything but 2!)
+    console.log("Number is anything but 2!")
 }
 ```
 
