@@ -18,7 +18,7 @@ Back then all logic had to be performed on the server side.
 
 That is, your internet browser would hit a page, you would fill in a form say, submit that form to the server, the server reads the form and then decides what do and sends you back a new page. 
 
-THe problem is - what happens if the form you are submitting - you forgot to fill a mandatory email field? You would have to wait for the page to be sent off and to get a response from the the server just to tell you 'the email field needs to be filled'.
+The problem is - what happens if the form you are submitting - you forgot to fill a mandatory email field? You would have to wait for the page to be sent off and to get a response from the the server just to tell you 'the email field needs to be filled'.
 
 My understanding is that this was the initial motivation for JavaScript - 'what if we could run some code in the browser to do simple little validation things like this, before we submit the form?'. 
 
