@@ -22,6 +22,8 @@ And when we ran the code it printed "hello world!" to the screen.
 
 Code comments are 'code' that isn't code at all, they serve to be readable documentation for developers, that lives in the code. 
 
+_Comments don't do anything, except be read by developers._
+
 In JavaScript code comments can be created with a double forward slash like: 
 
 ```javascript
