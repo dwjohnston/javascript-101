@@ -1,0 +1,19 @@
+{
+  "name": "lesson-106-ternary-operators",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT", 
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.3",
+    "@babel/core": "^7.14.3"
+  },
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "jest  --watchAll",
+    "start:windows": "winpty npm.cmd start"
+  },
+  "dependencies": {
+  }
+}
