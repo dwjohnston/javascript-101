@@ -95,7 +95,7 @@ const {name, ...rest} = user;
 
 
 
-## Prototype methods
+## Object Prototype methods
 
 These are important and I will mention them later: 
 
@@ -169,17 +169,6 @@ async function fetchUsers() {
 function fetchUsers2() {
     return fetch("/users").then(res => res.json()); 
 }
-
-```
-
-
-## Ternery operators 
-
-I will likely mention these later
-
-```javascript
-
-const valueToUse = Math.random() > 0.5 ? "high number" : "low number"; 
 
 ```
 

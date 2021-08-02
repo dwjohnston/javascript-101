@@ -59,7 +59,7 @@ function doSomethingToValue2(value, action) {
 ```
 
 
-I will also mention that switch statements are one of the few places where I think `let` statements are ok. 
+I will also mention that switch statements are one of the few places where I think `let` statements are ok. Basically the combination of the let statement and the  switch statement are behaving like the ternary operator does - where you are determining the value of the variable according to some conditions.  
 
 That is you might do something like: 
 
@@ -87,3 +87,15 @@ That is you might do something like:
         }
     }
 ```
+
+
+## Exercise 
+
+- Navigate to this directory (`lesson-107-switch-statements`) in your terminal. 
+- Install required dependencies with `yarn`.
+- Start the tests running with `yarn start` (or `yarn start:windows` if you are using Windows). 
+- Implement the functions in `src/exercise.js` such that the tests pass. You can examine the tests  in `src/exercise.test.js` to see what the functions should do. 
+
+
+ 
+
