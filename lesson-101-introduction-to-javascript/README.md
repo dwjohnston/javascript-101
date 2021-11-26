@@ -2,7 +2,7 @@
 
 First, let's talk about what you perhaps already might have already heard about JavaScript.
 
-Firstly - JavaScript is _not_ Java. The reason that the names are similar is marketing - JavaScript was invented at a time when Java was very popular, and [the company responsibly for creating it basically wanted to ride on its coat tails](https://en.wikipedia.org/wiki/JavaScript#Creation_at_Netscape). 
+Firstly - JavaScript is _not_ Java. The reason that the names are similar is marketing - JavaScript was invented at a time when Java was very popular, and [the company creating it basically wanted to ride on its coat tails](https://en.wikipedia.org/wiki/JavaScript#Creation_at_Netscape). 
 
 Secondly - you might have heard that JavaScript is an awful programming language with memes such as: 
 
