@@ -312,7 +312,7 @@ const myArrowFunction = (functionArgument1, functionArgument2) => {
 }
 ```
 
-For the purposes of this lesson, these two are are the same. There is a difference in how they behave, but we don't need to worry about that for now. 
+For the purposes of this lesson, these two are are the same. There is a difference in how they behave, but we don't need to worry about that for now. Even fairly experienced JavaScript developers won't be able to tell you what the difference is. 
 
 ### Anatomy of a function 
 
