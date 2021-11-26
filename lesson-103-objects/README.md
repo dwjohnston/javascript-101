@@ -1,6 +1,6 @@
 # Lesson 3 - Objects
 
-Objects are common... object in JavaScript. Basically an object is a collection of data. 
+Objects are a common... object in JavaScript. Basically an object is a collection of data. 
 
 for example we might define an object like: 
 
