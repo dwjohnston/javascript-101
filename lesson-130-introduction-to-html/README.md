@@ -193,15 +193,12 @@ We covered it earlier, but `<a>` tag is usually used with the `href` attribution
 
 ### Layout components - div, article, section, 
 
-The `<div>` `<article>` and `<section>` all _visually_ behave the the same way - they are just a way of grouping some content. 
+The `<div>` `<article>`  all _visually_ behave the the same way - they are just a way of grouping some content. 
 
 ```html
     <div> 
         <p>I am a paragraph inside a div</p>
     </div>
-    <section> 
-        <p>I am a paragraph inside a section</p>
-    </section>
     <article> 
         <p>I am a paragraph inside an article</p>
     </article>
