@@ -419,7 +419,9 @@ Errors provide the following functionality:
 - Provide a _stacktrace_ - a list of of the steps the program took to enounter the error. 
 - Allow the program to recover from the error at a point where it is practical.
 
-We call the process of creating one of these error objects and having it stop the program execution until its recovery process 'throwing an error' and we will talk more about _catching_ errors in another lesson.  
+We call the process of creating one of these error objects and having it stop the program execution until its recovery process 'throwing an error' and we will talk more about _catching_ errors in another lesson. This process is called 'error handling'.   
+
+⚠️ Note - You may also see the term 'exception' and 'exception handling' being used. Languages like Java actually make a distinction between what they call an 'exception' and an 'error'. For purposes of this tutorial we can treat the terms as synonymous. 
 
 ### Creating an error
 
