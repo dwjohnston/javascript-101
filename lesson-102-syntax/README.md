@@ -154,7 +154,7 @@ const g = d + a; //"1one"
 
 ## If statements 
 
-An if statement allows you to evaluate an expression and if that expression is true, then execution some code. 
+An if statement allows you to evaluate an expression and if that expression is true, then execute some code. 
 
 For example the following code will print "Number is 2!"
 
