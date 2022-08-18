@@ -80,7 +80,7 @@ const lastLetter = letters[arrayLength -1];
 console.log(lastLetter); //'c'; 
 ```
 
-🤔 This is where python is nice, in that you can access the last elmeent of an array with `-1` and the second to last with `-2` and so fourth.
+🤔 This is where python is nice, in that you can access the last element of an array with `-1` and the second to last with `-2` and so fourth.
 
 ## Using multidimensional arrays
 
