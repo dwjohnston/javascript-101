@@ -157,7 +157,7 @@ letters.forEach((value) => {
 
 Let's talk about what we're doing here: 
 
-1. Firstly, we're calling an _object function_ (a function that belongs to and object, in this case the object is the `letters` array). 
+1. Firstly, we're calling an _object function_ (a function that belongs to an object, in this case the object is the `letters` array). 
 2. We pass as the first and only argument, a function: `(value) => {//...}` This is commonly known as a [_lambda_ or _anonymous_ function.](https://en.wikipedia.org/wiki/Anonymous_function#:~:text=In%20computer%20programming%2C%20an%20anonymous,not%20bound%20to%20an%20identifier.). (Unfortunately AWS Lambda functions, which is a service provided by Amazon confuses the terminology a bit 😭 ) 
 3. That function has a parameter `value`, that is is going to be the current element as the we iterate over the array. 
 4. We print the value. 
